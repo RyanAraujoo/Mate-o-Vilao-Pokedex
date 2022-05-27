@@ -14,20 +14,18 @@
     <meta name="description" content="Aplicação Web para diversão online, revivendo as grandes emoções do game POKEMON e seu mundo de batalhas.">
     <meta name="keywords" content="HTML,CSS,JAVASCRIPT">
 </head>
-<body>
-   
-    <section class="imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem-->
+   <div class="imagem-caixa-pokemon"> <!-- criacao da imagem -->
+    <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa article-->
+    <article class="audio-pokedex">
+        <audio controls autoplay muted id="audio">
+            <source src="./audios/pokemon_abertura_musical.ogg" type="audio/ogg">
+            <source src="./audios/pokemon_abertura_musical.mp3" type="audio/mpeg">
+        </audio>
+    </article>
+    <section class="coloracao-imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem-->
        
-        <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa article-->
-        <article class="audio-pokedex">
-            <audio controls autoplay>
-                <source src="./audios/pokemon_abertura_musical.ogg" type="audio/ogg">
-                <source src="./audios/pokemon_abertura_musical.mp3" type="audio/mpeg">
-            </audio>
-        </article>
-
         <!-- Titulo da pagina com uma imagem de um pokemon ao lado-->
-        <article>   <!-- envolvi estas divs com o article para fazer um posicionamento flexionado ao lado-->
+        <article class="article-cabecalho-da-pagina">   <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
             <div> <!-- caixa titulo da pagina-->
                 <p>Mate o Vilão</p>
                 <h2>PokeDex</h2>
@@ -37,13 +35,13 @@
             </figure>
         </article>
                 
-        <article> <!-- caixa article responsavel por nos motrar as informações do jogo-->
+        <article class="article-regras-do-jogo"> <!-- caixa article responsavel por nos motrar as informações do jogo-->
             <h4>REGRAS DO JOGO</h4>
             <p>1 - Escolha o seu pokemon para a batalha!</p>
-            <p>2 - Selecione as opções mostradas na tela com fins de vencer o pokemon BOSS</p>
+            <p>2 - Selecione as opções mostradas na tela com fins de vencer o pokemon BOSS!</p>
         </article>
 
-        <article class="btn-Iniciar"> <!-- caixa article para encobrir o botao funcional-->
+        <article class="article-botao-Iniciar"> <!-- caixa article para encobrir o botao funcional-->
             <button>Clique Aqui</button>
         </article>
         
@@ -54,16 +52,17 @@
                <cite><p>API: https://pokeapi.co/</p></cite>  <!-- api usada na aplicação-->
             </div>
             <div> <!-- informações do autor e descriçao da pagina na parte visual -->
-                <h3>Desenvolvido by: Ryan Araújo</h3>
+                <h3>Desenvolvedor: Ryan Araújo</h3>
                 <p>Formação Java - Entry Point 2022.1</p>
                <cite><p>Prof: Cid Andrade Retratos</p></cite> 
             </div>
             <div> <!-- links funcionais por meio de imagens para contato-->
                 <a href="/"><img src="./assets/icone-linkedin.png" alt="imagem-icone-rede-social-linkedin" width="50" height="50"></a>
-                <a href="/"><img src="./assets/icone-gmail.png" alt="imagem-icone-rede-social-gmail" width="80" height="50"></a>
+                <a href="/"><img src="./assets/icone-gmail.png" alt="imagem-icone-rede-social-gmail" width="50" height="50"></a>
             </div>
         </footer>
     </section>
+</div>
     <!-- Inserir o Scriptjs no final da página para ela autenticar primeiro.-->
     <script src='./scripts/script.js'></script>
 </body>
