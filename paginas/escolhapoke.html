@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- informações recursivas/responsiva da pagina -->
     <meta charset="UTF-8">
@@ -8,104 +9,65 @@
 
     <title>Mate o Vilão - PokeDex</title> <!-- titulo da pagina -->
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
-    <link rel="stylesheet" href="../css/style.css">  <!-- css externo -->
-    <link rel="stylesheet" href="../css/carousel.css">
-    <link rel="stylesheet" href="../css/landing page.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/landing page.css"> <!-- css externo -->
 </head>
+
 <body>
     <div class="imagem-caixa-pokemon">
         <section class="coloracao-imagem-caixa-pokemon">
-            <article class="article-cabecalho-da-pagina">   <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
-                <div> <!-- caixa titulo da pagina-->
+            <article class="article-cabecalho-da-pagina">
+                <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
+                <div>
+                    <!-- caixa titulo da pagina-->
                     <p>Mate o Vilão</p>
                     <h2>PokeDex</h2>
                 </div>
-                <figure> <!-- caixa criada para identar uma imagem de pokemon -->
+                <figure>
+                    <!-- caixa criada para identar uma imagem de pokemon -->
                     <img src="../assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
                 </figure>
             </article>
             <article class="carousel-title">
                 <h2>Escolha o seu Pokemon!</h2>
             </article>
-           <!-- Slideshow container -->
-<div class="slideshow-container">
-    <div class="landing-page">
-        <h2>Você tem certeza da sua escolha?</h2>
-        <div id="pokemon">
-            <h3 class="nome-pokemon"></h3>
-            <p class="vida-pokemon"></p>
-            <p class="ataque-pokemon"></p>
-        </div>
-        <div class="btns">
-            <button>Sim</button>
-            <button>Não</button>
-        </div>
-    </div>
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-        <div class="text">Bulbasaur</div>
-      <div class="numbertext" >1/9</div>
-      <img src="../assets/pokers/bulbasaur.gif" style="width:100%">
-      
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 9</div>
-      <img src="../assets/pokers/charizard-pokemon-charizard.gif" style="width:100%">
-      <div class="text">Charizard</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 9</div>
-      <img src="../assets/pokers/eevee-pokemon.gif" style="width:100%">
-      <div class="text">Eevee</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">4 / 9</div>
-        <img src="../assets/pokers/gardevoir-pokemon.gif" style="width:100%">
-        <div class="text">Gardevoir</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">5 / 9</div>
-        <img src="../assets/pokers/lucario-pokemon.gif" style="width:100%">
-        <div class="text">Lucario</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">6 / 9</div>
-        <img src="../assets/pokers/pokemon-gengar.gif" style="width:100%">
-        <div class="text">Gengar</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">7 / 9</div>
-        <img src="../assets/pokers/eevee-pokemon.gif" style="width:100%">
-        <div class="text">Eevee</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">8 / 9</div>
-        <img src="../assets/pokers/pokemon-pikachu.gif" style="width:100%">
-        <div class="text">Pikachu</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">9 / 9</div>
-        <img src="../assets/pokers/umbreon-pokemon.gif" style="width:100%">
-        <div class="text">Umbreon</div>
-      </div>
-
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-            <article class="article-botao-Iniciar">
-                <button onclick="confirmarEscolha()"><a href="/">Jogar</a></button>
+            <article>
+                <div class="landing-page">
+                    <h2>Você tem certeza da sua escolha?</h2>
+                    <div id="pokemon">
+                        <p class="nome-pokemon"></p>
+                        <p class="vida-pokemon"></p>
+                        <p class="ataque-pokemon"></p>
+                        <img class="imagem-pokemon" src="" alt="" width="200" height="200">
+                    </div>
+                    <div class="btns">
+                        <a href="./game.html">Sim</a>
+                        <button onclick="DesabilitarLandingPage()">Não</button>
+                    </div>
+                </div>
+                <div>
+                    <select onchange="verPokemon()" class="select-pokemon">
+                        <option value='default' selected>Selecione um Pokemon</option>
+                        <option value="1">Charizard</option>
+                        <option value="2">Gengar</option>
+                        <option value="3">Bulbasaur</option>
+                        <option value="4">Umbreom</option>
+                        <option value="5">Lucario</option>
+                        <option value="6">Gardevior</option>
+                        <option value="7">Eevee</option>
+                        <option value="8">Pikachu</option>
+                    </select>
+                </div>
+                <div>
+                    <img id="img-pokemon" src="../assets/pokers/pokemon.jpg" alt="" width='200' height="200">
+                </div>
             </article>
-            
-
+            <article class="article-botao-Iniciar">
+                <button id="btnHabilitaLandingPage" onclick="HabilitarLandingPage()">Jogar</button>
+            </article>
         </section>
-
     </div>
-<script src="../scripts/api.js"></script>
-<script src="../scripts/caurosel.js"></script>
+    <script src="../scripts/banco-de-dados.js"></script>
+    <script src="../scripts/validacao.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
