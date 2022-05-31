@@ -1,3 +1,6 @@
+/* informações do nossos pokemons em um modelo de controle de dados */
+/* ultimo pokemon é sempre o nosso vilão */
+
 const infoPokers = [
     {
         nome: "default",
@@ -50,5 +53,11 @@ const infoPokers = [
         ataque: 100,   
         vida: 200,
         src: "../assets/pokers/pokemon-pikachu.gif"          
+    },
+    {
+        nome: "Mewtwo",
+        ataque: 80,
+        vida: 190,
+        src: "../assets/pokers/pokemon-vilao.gif"
     }
 ]

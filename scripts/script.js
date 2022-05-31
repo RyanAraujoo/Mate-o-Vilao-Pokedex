@@ -1,17 +1,23 @@
-let audio = document.getElementById("audio")
+/* select, pagina de confirmacao e seu botão etão como variaveis global por serem usadas por mais de um metodo */
 var select = document.querySelector(".select-pokemon")
+/* guardar informação de uma pagina e levar para outra mesmo com redirecionamento */
+localStorage.setItem("select",select.value)
+
+
 var btn = document.getElementById("btnHabilitaLandingPage")
 var landPage = document.querySelector(".landing-page")
 
+/* audio manipulado para desmutar após os 8 segundos da musica */
+let audio = document.getElementById("audio")
 setTimeout(() => {
     audio.muted = false
 }, 8000)
-
+/* função que apaga a pagina de confirmação e volta a escolha do pokemon */
 function DesabilitarLandingPage() {
     landPage.style.display = "none"
     btn.disabled = false
 }
-
+/* função que traz os dados do pokemon escolhido para nossa pagina de confirmação */
 function RenderizaPokemon() {
     let nome = document.querySelector(".nome-pokemon")
     let ataque = document.querySelector(".ataque-pokemon")
@@ -23,7 +29,7 @@ function RenderizaPokemon() {
     vida.innerHTML = `Vida do Pokemon: ${infoPokers[select.value].vida}`
     imagem.src = infoPokers[select.value].src
 }
-
+/* função que retorna pra tela a pagina de confirmação para começar o jogo */
 function HabilitarLandingPage() {
 
     if (select.value !== "default") {
@@ -35,7 +41,7 @@ function HabilitarLandingPage() {
         alert("Selecione seu pokemon!")
     }
 }
-
+/* validação do pokemon escolhido por meio do select */
 function verPokemon() {
     let assets = document.getElementById("img-pokemon")
 

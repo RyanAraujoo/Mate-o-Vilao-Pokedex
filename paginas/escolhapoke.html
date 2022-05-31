@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <!-- informações recursivas/responsiva da pagina -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Mate o Vilão - PokeDex</title> <!-- titulo da pagina -->
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/landing page.css"> <!-- css externo -->
+    <!-- css externo -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- css geral -->
+    <link rel="stylesheet" href="../css/landing page.css">  <!-- css da landing page de confirmação -->
 </head>
 
 <body>
+    <!-- div principal  com a imagem do pokemon seguida de outra div aboluta para coloração -->
     <div class="imagem-caixa-pokemon">
+        <img src="../assets/tela-principal.jpg" alt="">
         <section class="coloracao-imagem-caixa-pokemon">
             <article class="article-cabecalho-da-pagina">
                 <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
@@ -28,24 +29,29 @@
                     <img src="../assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
                 </figure>
             </article>
-            <article class="carousel-title">
+            <!-- subtitulo informativo da pagina-->
+            <article class="subtitulo">
                 <h2>Escolha o seu Pokemon!</h2>
             </article>
             <article>
+                <!-- pagina de captura de confirmação da escolha do pokemon -->
                 <div class="landing-page">
                     <h2>Você tem certeza da sua escolha?</h2>
                     <div id="pokemon">
+                        <!-- manipulações via dom puxando do banco de dados (js) -->
                         <p class="nome-pokemon"></p>
                         <p class="vida-pokemon"></p>
                         <p class="ataque-pokemon"></p>
                         <img class="imagem-pokemon" src="" alt="" width="200" height="200">
                     </div>
                     <div class="btns">
+                        <!-- botões de escolha para continuar o game ou retornar a escolha -->
                         <a href="./game.html">Sim</a>
                         <button onclick="DesabilitarLandingPage()">Não</button>
                     </div>
-                </div>
+                </div> <!-- fechamento da pagina de captura com display block apenas ao clique -->
                 <div>
+                    <!-- input do forma select para coletarmos uma informação -->
                     <select onchange="verPokemon()" class="select-pokemon">
                         <option value='default' selected>Selecione um Pokemon</option>
                         <option value="1">Charizard</option>
@@ -57,17 +63,21 @@
                         <option value="7">Eevee</option>
                         <option value="8">Pikachu</option>
                     </select>
-                </div>
+                    <!-- colheita do valor via "value" descrito no js-->
+                </div><br>
                 <div>
+                    <!-- imagem do pokemon conforme selecionado pelas opções -->
                     <img id="img-pokemon" src="../assets/pokers/pokemon.jpg" alt="" width='200' height="200">
                 </div>
+                <hr>
             </article>
+            <!-- botão que gera o display block na confirmação via pagina de captura -->
             <article class="article-botao-Iniciar">
-                <button id="btnHabilitaLandingPage" onclick="HabilitarLandingPage()">Jogar</button>
+                <button id="btnHabilitaLandingPage" class="btnClickLandPage" onclick="HabilitarLandingPage()">Jogar</button>
             </article>
         </section>
     </div>
+    <!-- scripts no final da pagina para deixar nossa page mais lisa -->
     <script src="../scripts/banco-de-dados.js"></script>
-    <script src="../scripts/validacao.js"></script>
     <script src="../scripts/script.js"></script>
 </body>

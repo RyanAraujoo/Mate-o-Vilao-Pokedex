@@ -16,7 +16,10 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    object-fit: cover;
+    overflow: hidden;
 }
+
 
 .coloracao-imagem-caixa-pokemon {
     /* coloração por cima da imagem principal */
@@ -30,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* estilização do audio */
@@ -50,6 +53,17 @@
     position: relative;
     text-align: center;
     margin-top: 70px;
+    margin-bottom: 150px;
+    animation: moveBanner 1s 0.5s forwards;
+}
+@keyframes moveBanner {
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
 }
 
 .article-cabecalho-da-pagina figure img {
@@ -72,6 +86,8 @@
 .article-regras-do-jogo {
     text-align: center;
     font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .article-regras-do-jogo p {
@@ -82,15 +98,17 @@
 /* estilização do botão funcional que levará para outra pagina da aplicação*/
 .article-botao-Iniciar {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.article-botao-Iniciar button {
+.article-botao-Iniciar a, .btnClickLandPage{
     background-color: rgba(0, 0, 0, 0.623);
     color: #fff;
     border-radius: 40px;
     padding: 25px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* estilização do rodapé da pagina */
@@ -101,6 +119,7 @@
     text-align: center;
     padding: 15px;
     flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .rodape-pagina div {
@@ -109,4 +128,35 @@
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 15px;
+}
+/* estilização do game.html - gamificação da nossa pagina web */
+.inicio-jogo-pokemon {
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pokemon-jogador, .pokemon-vilao {
+    background-color: rgba(255, 255, 255, 0.781);
+    color: #000;
+    padding: 25px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.botoes-jogo-pokemon button {
+    background-color: rgba(0, 0, 0, 0.623);
+    color: #fff;
+    border-radius: 40px;
+    padding: 25px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+}
+/* subtitulo - esccolha seu pokemon */
+.subtitulo {
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
