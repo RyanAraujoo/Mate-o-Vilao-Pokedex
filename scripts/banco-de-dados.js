@@ -1,6 +1,5 @@
 /* informações do nossos pokemons em um modelo de controle de dados */
 /* ultimo pokemon é sempre o nosso vilão */
-
 const infoPokers = [
     {
         nome: "default",

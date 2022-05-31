@@ -1,9 +1,11 @@
 /* select, pagina de confirmacao e seu botão etão como variaveis global por serem usadas por mais de um metodo */
 var select = document.querySelector(".select-pokemon")
 /* guardar informação de uma pagina e levar para outra mesmo com redirecionamento */
-localStorage.setItem("select",select.value)
+function salvarPokemon() {
+    sessionStorage.setItem("select",select.value)
 
-
+    sessionStorage.setItem("infoPokers", JSON.stringify(infoPokers))
+}
 var btn = document.getElementById("btnHabilitaLandingPage")
 var landPage = document.querySelector(".landing-page")
 
