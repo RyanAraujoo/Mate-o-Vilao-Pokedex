@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <!-- informações recursivas/responsiva da pagina -->
     <meta charset="UTF-8">
@@ -10,15 +9,54 @@
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/landing page.css"> <!-- css externo -->
+   
+    
 </head>
 
-<body>
+<body onload="IniciarJogo()">
+    <!-- estrutura básica da pagina de fundo mais o titulo-->
+    <div class="imagem-caixa-pokemon">
+        <section class="coloracao-imagem-caixa-pokemon">
+            <article class="article-cabecalho-da-pagina">
+                <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
+                <div>
+                    <!-- caixa titulo da pagina-->
+                    <p>Mate o Vilão</p>
+                    <h2>PokeDex</h2>
+                </div>
+                <figure>
+                    <!-- caixa criada para identar uma imagem de pokemon -->
+                    <img src="../assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
+                </figure>
+            </article>
+            <!-- sessão com a localização do jogo-->
+            <article class="inicio-jogo-pokemon" >
+                <!-- informações do nosso pokemon -->
+                <div class="pokemon-jogador">
+                    <p class="nome-pokemon-jogador"></p>
+                    <p class="vida-pokemon-jogador"></p>
+                    <p class="ataque-pokemon-jogador"></p>
+                    <img class="imagem-pokemon-jogador" src="" alt="" width="200" height="200">
+                </div>
+            <!-- botões funcionais do nosso game -->
+                <div class="botoes-jogo-pokemon">
+                    <button onclick="AtacarPokemon()">Atacar</button>
+                    <button onclick="CurarPokemon()">Curar</button>
+                </div>
+            <!-- informações do pokemon vilão -->
+                <div class="pokemon-vilao">
+                    <p class="nome-pokemon-vilao"></p>
+                    <p class="vida-pokemon-vilao"></p>
+                    <p class="ataque-pokemon-vilao"></p>
+                    <img class="imagem-pokemon-vilao" src="" alt="" width="200" height="200">
+                </div>
+            </section>
+            </div>
 
-
-
-    <script src="../scripts/banco-de-dados.js"></script>
-    <script src="../scripts/validacao.js"></script>
-    <script src="../scripts/script.js"></script>
+<!-- scripts no final da pagina para renderizar pós carregamento da pagina -->
+<script src="../scripts/banco-de-dados.js"></script>
+<script src="../scripts/script.js"></script>
+<script src="../scripts/game.js"></script>
 </body>
 
 </html>
