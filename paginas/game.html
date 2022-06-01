@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mate o Vilão - PokeDex</title> <!-- titulo da pagina -->
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/landing page.css"> <!-- css externo -->
-   
-    
+    <link rel="stylesheet" href="../css/style.css"> <!-- css externo -->
+    <link rel="stylesheet" href="../css/landing page.css"> <!-- css da pagina de confirmação  -->
 </head>
-
+<!-- após o carregamento do body, função que renderiza os pokemons na estrutura-->
 <body onload="AtualizarJogo()">
     <!-- estrutura básica da pagina de fundo mais o titulo-->
+    <!-- imagem do pokemon -->
     <div class="imagem-caixa-pokemon">
+        <!-- coloração por cima da imagem do pokemon com as informações sobreposta -->
         <section class="coloracao-imagem-caixa-pokemon">
             <article class="article-cabecalho-da-pagina">
                 <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
@@ -29,10 +29,11 @@
                     <img src="../assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
                 </figure>
             </article>
-            <!-- sessão com a localização do jogo-->
+            <!-- sessão do jogo/game -->
             <article class="inicio-jogo-pokemon" >
-                <!-- landing page de vitoria/derrota-->
                 <div class="landing-page">
+                     <!-- pagina de captura (landing page) de vitoria ou derrota-->
+                <!-- está nesta posição pelo fato de se posiconar em relação ao local do game -->
                     <div id="pokemon">
                         <h2 class="resultado-game"></h2>
                         <!-- manipulações via dom puxando do banco de dados (js) -->
@@ -44,17 +45,17 @@
                         <a class="btn-nao" onclick="location.reload()">Jogar Novamente!</a>
                     </div>
                 </div>
-                <!-- informações do nosso pokemon -->
+                <!-- informações do pokemon escolhido -->
                 <div id="pokemon-jogador">
                     <p class="nome-pokemon-jogador"></p>
                     <p class="vida-pokemon-jogador"></p>
                     <p class="ataque-pokemon-jogador"></p>
                     <img class="imagem-pokemon-jogador" src="" alt="" width="200" height="200">
                 </div>
-            <!-- botões funcionais do nosso game -->
+            <!-- botões funcionais de ação do game -->
                 <div class="botoes-jogo-pokemon">
-                    <button  class="btn" onclick="AtacarPokemon()">Atacar</button>
-                    <button  onclick="CurarPokemon()">Curar</button>
+                    <button class='btn' onclick="AtacarPokemon()">Atacar</button>
+                    <button class='btn' onclick="CurarPokemon()">Curar</button>
                 </div>
             <!-- informações do pokemon vilão -->
                 <div id="pokemon-vilao">
@@ -64,18 +65,14 @@
                     <img class="imagem-pokemon-vilao" src="" alt="" width="200" height="200">
                 </div>
                 </article>
-                
-                    <h2 class="statusGame"></h2>
-                
             </section>
-
             </div>
 
 <!-- scripts no final da pagina para renderizar pós carregamento da pagina -->
-<script src="../scripts/banco-de-dados.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../scripts/game.js"></script>
+<script src="../scripts/banco-de-dados.js"></script>
 <script src="../scripts/script.js"></script>
-
 </body>
 
 </html>

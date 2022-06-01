@@ -10,7 +10,7 @@
 }
 
 .imagem-caixa-pokemon {
-    /* estilização da caixa principal ( comportamento dos elementos sobre a iamgem ) */
+    /* estilização da imagem principal de cada pagina */
     background-image: url(../assets/tela-principal.jpg);
     height: 150vh;
     background-size: cover;
@@ -22,7 +22,7 @@
 
 
 .coloracao-imagem-caixa-pokemon {
-    /* coloração por cima da imagem principal */
+    /* estilização da coloração por cima da imagem principal */
     background-color: rgba(0, 0, 0, 0.733);
     position: absolute;
     top: 0;
@@ -36,26 +36,15 @@
     justify-content: center;
 }
 
-/* estilização do audio */
-.audio-pokedex {
-    text-align: right;
-}
-
-.audio-pokedex audio {
-    color: black;
-    width: 150px;
-    height: 50px;
-    margin: 15px;
-}
-
 /* estilização do cabeçalho da pagina */
 .article-cabecalho-da-pagina {
     position: relative;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 150px;
     animation: moveBanner 1s 0.5s forwards;
 }
+/* animação que faz o movimento do cabecalho da pagina */
 @keyframes moveBanner {
     0%{
         transform: translateY(10rem) rotateY(-30deg);
@@ -65,7 +54,7 @@
         opacity: 1;
     }
 }
-
+/* estilização da imagem que está junto do titulo */
 .article-cabecalho-da-pagina figure img {
     position: absolute;
     top: 0;
@@ -82,7 +71,7 @@
     color: rgb(255, 255, 0);
 }
 
-/* estilização sobre as regras do jogo */
+/* estilização da caixa sobre as regras do jogo */
 .article-regras-do-jogo {
     text-align: center;
     font-size: 25px;
@@ -95,7 +84,7 @@
     margin-bottom: 5px;
 }
 
-/* estilização do botão funcional que levará para outra pagina da aplicação*/
+/* estilização dos botões funcionais da pagina */
 .article-botao-Iniciar {
     text-align: center;
     margin-bottom: 50px;
@@ -106,6 +95,7 @@ a:hover, button:hover {
     transition: ease-in-out;
     animation: botaoAnimacao 1.5s;
 }
+/* animação junto com o hover */
 @keyframes botaoAnimacao {
     0% { scale: 1.1;}
     33% { scale: 2.0; }
@@ -121,7 +111,7 @@ a:hover, button:hover {
     text-decoration: none;
 }
 
-/* estilização do rodapé da pagina */
+/* estilização do rodapé da pagina ( informação especificas do autor/créditos */
 .rodape-pagina {
     background-color: rgba(0, 0, 0, 0.719);
     display: flex;
@@ -173,6 +163,7 @@ a:hover, button:hover {
     margin-bottom: 15px;
     margin-top: 15px;
 }
+/* estilização da manipulação das caixas( divs ) relacionadas a estrutura da gameificação */
 .backgroundRed {
     animation: fundoVermelho 3.5s;
 }

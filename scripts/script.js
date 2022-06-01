@@ -1,11 +1,14 @@
-/* select, pagina de confirmacao e seu botão etão como variaveis global por serem usadas por mais de um metodo */
+// select, pagina de confirmacao e seu botão etão como variaveis global por serem usadas por mais de um metodo */
 var select = document.querySelector(".select-pokemon")
-/* guardar informação de uma pagina e levar para outra mesmo com redirecionamento */
+// guardar informação de uma pagina e levar para outra mesmo com redirecionamento */
+// no script do game.js, precisarei das informações descritas aqui e a função salvarpokemon() irá me ajudar
 function salvarPokemon() {
     sessionStorage.setItem("select",select.value)
     sessionStorage.setItem("infoPokers", JSON.stringify(infoPokers))
 }
+// botão que permite a confirmação da pagina de escolha
 var btn = document.getElementById("btnHabilitaLandingPage")
+// pagina de captura
 var landPage = document.querySelector(".landing-page")
 
 
@@ -26,7 +29,7 @@ function RenderizaPokemon() {
     vida.innerHTML = `Vida do Pokemon: ${infoPokers[select.value].vida}`
     imagem.src = infoPokers[select.value].src
 }
-/* função que retorna pra tela a pagina de confirmação para começar o jogo */
+/* função que retorna pra tela, a pagina de confirmação para começar o jogo */
 function HabilitarLandingPage() {
 
     if (select.value !== "default") {

@@ -9,12 +9,13 @@
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
     <!-- css externo -->
     <link rel="stylesheet" href="../css/style.css"> <!-- css geral -->
-    <link rel="stylesheet" href="../css/landing page.css">  <!-- css da landing page de confirmação -->
+    <link rel="stylesheet" href="../css/landing page.css">  <!-- css da pagina de confirmação da escolha do pokemon -->
 </head>
 
 <body>
-    <!-- div principal  com a imagem do pokemon seguida de outra div aboluta para coloração -->
+    <!-- div principal  com a imagem do pokemon -->
     <div class="imagem-caixa-pokemon">
+        <!-- coloração por cima da imagem com os elementos sobrepostos-->
         <section class="coloracao-imagem-caixa-pokemon">
             <article class="article-cabecalho-da-pagina">
                 <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
@@ -28,12 +29,12 @@
                     <img src="../assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
                 </figure>
             </article>
-            <!-- subtitulo informativo da pagina-->
+            <!-- sub-titulo informativo da pagina-->
             <article class="subtitulo">
                 <h2>Escolha o seu Pokemon!</h2>
             </article>
             <article>
-                <!-- pagina de captura de confirmação da escolha do pokemon -->
+                <!-- pagina de confirmação da escolha do pokemon -->
                 <div class="landing-page">
                     <h2>Você tem certeza da sua escolha?</h2>
                     <div id="pokemon">
@@ -62,21 +63,21 @@
                         <option value="7">Eevee</option>
                         <option value="8">Pikachu</option>
                     </select>
-                    <!-- colheita do valor via "value" descrito no js-->
+                    <!-- colheita do valor via "value" descrito no .js-->
                 </div><br>
                 <div>
-                    <!-- imagem do pokemon conforme selecionado pelas opções -->
+                    <!-- imagem do pokemon conforme selecionado pelas opções do select -->
                     <img id="img-pokemon" src="../assets/pokers/pokemon.jpg" alt="" width='200' height="200">
                 </div>
                 <hr>
             </article>
-            <!-- botão que gera o display block na confirmação via pagina de captura -->
+            <!-- botão que gera o aparecimento da confirmação via pagina de captura -->
             <article class="article-botao-Iniciar">
                 <button id="btnHabilitaLandingPage" class="btnClickLandPage" onclick="HabilitarLandingPage()">Jogar</button>
             </article>
         </section>
     </div>
-    <!-- scripts no final da pagina para deixar nossa page mais lisa -->
+    <!-- scripts no final da pagina para deixar apenas renderiza-los pós carregamento da pagina  -->
     <script src="../scripts/banco-de-dados.js"></script>
     <script src="../scripts/script.js"></script>
 </body>

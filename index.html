@@ -8,15 +8,17 @@
 
     <title>Mate o Vilão - PokeDex</title> <!-- titulo da pagina -->
     <link rel="icon" href="./assets/tela-principal-poke-logo.png"> <!-- icone da pagina -->
-    <link rel="stylesheet" href="./css/style.css">  <!-- css externo -->
+    <link rel="stylesheet" href="./css/style.css">  <!-- css externo principal -->
+
 <!-- Identificadores da Pagina -->
     <meta name="author" content="Ryan Pablo Silva Araujo">
     <meta name="description" content="Aplicação Web para diversão online, revivendo as grandes emoções do game POKEMON e seu mundo de batalhas.">
     <meta name="keywords" content="HTML,CSS,JAVASCRIPT">
 </head>
-   <div class="imagem-caixa-pokemon"> <!-- criacao da imagem -->
-    <section class="coloracao-imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem-->
-            <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa article-->
+<body>
+   <div class="imagem-caixa-pokemon"> <!-- indexação da imagem de fundo -->
+    <section class="coloracao-imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem.-->
+            <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa -->
         <audio controls autoplay id="audio">
             <source src="./audios/pokemon_abertura_musical.ogg" type="audio/ogg">
             <source src="./audios/pokemon_abertura_musical.mp3" type="audio/mpeg">
@@ -27,7 +29,7 @@
                 <p>Mate o Vilão</p>
                 <h2>PokeDex</h2>
             </div>
-            <figure> <!-- caixa criada para identar uma imagem de pokemon -->
+            <figure> <!-- caixa própria relacionado a figura criada para identar uma imagem de pokemon -->
                 <img src="./assets/tela-principal-poke-logo.png" alt="pokemon-pikachu-flutuante">
             </figure>
         </article>
@@ -40,7 +42,7 @@
             <p>4-  Vença o melhor! Bom jogo!</p>
         </article>
 
-        <article class="article-botao-Iniciar"> <!-- caixa article para encobrir o botao funcional-->
+        <article class="article-botao-Iniciar"> <!-- caixa article para encobrir o botao funcional que leva a outra página-->
             <a href="./paginas/escolhapoke.html">Clique Aqui</a>
         </article>
         
@@ -48,7 +50,7 @@
             <div> <!-- créditos da aplicação -->
                 <h3>Créditos:</h3>
                <cite>https://github.com/devmediadev/desafio_pokemon</cite> <!-- apontamento dos créditos a um estilo de jogo que me inspirei-->
-               <cite><p>API: https://pokeapi.co/</p></cite>  <!-- api usada na aplicação-->
+    
             </div>
             <div> <!-- informações do autor e descriçao da pagina na parte visual -->
                 <h3>Desenvolvedor: Ryan Araújo</h3>
@@ -56,13 +58,13 @@
                <cite><p>Prof: Cid Andrade Retratos</p></cite> 
             </div>
             <div> <!-- links funcionais por meio de imagens para contato-->
-                <a href="/"><img src="./assets/icone-linkedin.png" alt="imagem-icone-rede-social-linkedin" width="50" height="50"></a>
-                <a href="/"><img src="./assets/icone-gmail.png" alt="imagem-icone-rede-social-gmail" width="50" height="50"></a>
+                <a href="https://www.linkedin.com/in/ryanpsa/"><img src="./assets/icone-linkedin.png" alt="imagem-icone-rede-social-linkedin" width="50" height="50"></a>
+                <a href="malito:contatoryanaraujo@gmail.com"><img src="./assets/icone-gmail.png" alt="imagem-icone-rede-social-gmail" width="50" height="50"></a>
             </div>
         </footer>
     </section>
 </div>
-    <!-- Inserir o Scriptjs no final da página para ela autenticar primeiro.-->
+    <!-- Inserir o Scriptjs no final da página para ela, a página,  autenticar primeiro.-->
     <script src='./scripts/script.js'></script>
 </body>
 </html>
