@@ -101,7 +101,17 @@
     margin-bottom: 50px;
     margin-top: 50px;
 }
-
+a:hover, button:hover {
+    background: linear-gradient(0deg, rgba(186,195,34,1) 0%, rgba(253,187,45,1) 100%);
+    transition: ease-in-out;
+    animation: botaoAnimacao 1.5s;
+}
+@keyframes botaoAnimacao {
+    0% { scale: 1.1;}
+    33% { scale: 2.0; }
+    85% { background: #b9b608; color: rgb(0, 0, 0); }
+    100% { background:rgba(186,195,34,1) ; color: rgb(0, 0, 0); }
+  }
 .article-botao-Iniciar a, .btnClickLandPage{
     background-color: rgba(0, 0, 0, 0.623);
     color: #fff;
@@ -131,13 +141,16 @@
 }
 /* estilização do game.html - gamificação da nossa pagina web */
 .inicio-jogo-pokemon {
-    background-color: rgba(0, 0, 0, 0.658);
+    background-color: rgba(0, 0, 0, 0.788);
     padding: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
-
+.inicio-jogo-pokemon p:first-child {
+        font-weight: bolder;
+}
 .pokemon-jogador, .pokemon-vilao {
     background-color: rgba(255, 255, 255, 0.781);
     color: #000;
@@ -147,7 +160,7 @@
     margin-left: 10px;
 }
 .botoes-jogo-pokemon button {
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: rgba(0, 0, 0, 0.801);
     color: #fff;
     border-radius: 40px;
     padding: 25px;
@@ -160,3 +173,22 @@
     margin-bottom: 15px;
     margin-top: 15px;
 }
+.backgroundRed {
+    animation: fundoVermelho 3.5s;
+}
+.backgroundGren {
+    animation: fundoVerde 3.5s;
+}
+@keyframes fundoVermelho {
+    0% { background: transparent; color: #333;}
+    33% { background: #c1272d; color: #FFF; }
+    85% { background: #c1272d; color: #FFF; }
+    100% { background: rgba(255, 255, 255, 0); color: #333; }
+  }
+  @keyframes fundoVerde {
+    0% { background: transparent; color: #333;}
+    33% { background: #1bbe23; color: #FFF; }
+    85% { background: #1bbe23; color: #FFF; }
+    100% { background: rgba(255, 255, 255, 0); color: #333; }
+  }
+

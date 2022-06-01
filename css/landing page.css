@@ -12,10 +12,10 @@ article:nth-child(3) {
     background-color: rgba(0, 0, 0, 0.887); 
     color: #fff;
     /* posicionamento */
-    padding: 15px;
+    padding: 25px;
     top: 0;
-    height: 60vh;
     width: 50vw;
+    height: 55vh;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -23,6 +23,7 @@ article:nth-child(3) {
     /* hierarquia no posicionamento na tela */
     z-index: 100;
     display: none;
+    border-radius: 15px;
 }
 /* estilização dos textos h2 dentro da classe landing page */
 .landing-page h2 {
@@ -47,4 +48,5 @@ a {
     background-color: #fff;
     color: #000;
     font-size: 15px;
+    cursor: pointer;
 }

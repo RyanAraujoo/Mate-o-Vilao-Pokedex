@@ -3,17 +3,12 @@ var select = document.querySelector(".select-pokemon")
 /* guardar informação de uma pagina e levar para outra mesmo com redirecionamento */
 function salvarPokemon() {
     sessionStorage.setItem("select",select.value)
-
     sessionStorage.setItem("infoPokers", JSON.stringify(infoPokers))
 }
 var btn = document.getElementById("btnHabilitaLandingPage")
 var landPage = document.querySelector(".landing-page")
 
-/* audio manipulado para desmutar após os 8 segundos da musica */
-let audio = document.getElementById("audio")
-setTimeout(() => {
-    audio.muted = false
-}, 8000)
+
 /* função que apaga a pagina de confirmação e volta a escolha do pokemon */
 function DesabilitarLandingPage() {
     landPage.style.display = "none"

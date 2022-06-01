@@ -15,15 +15,12 @@
     <meta name="keywords" content="HTML,CSS,JAVASCRIPT">
 </head>
    <div class="imagem-caixa-pokemon"> <!-- criacao da imagem -->
-    <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa article-->
-    <article class="audio-pokedex">
-        <audio controls muted id="audio">
+    <section class="coloracao-imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem-->
+            <!-- Audio inicial da nossa pagina web ( abertura pokemon ) dentro duma caixa article-->
+        <audio controls autoplay id="audio">
             <source src="./audios/pokemon_abertura_musical.ogg" type="audio/ogg">
             <source src="./audios/pokemon_abertura_musical.mp3" type="audio/mpeg">
         </audio>
-    </article>
-    <section class="coloracao-imagem-caixa-pokemon">  <!-- Criação da caixa (section) para que os elementos fiquem sobrepostos a imagem-->
-       
         <!-- Titulo da pagina com uma imagem de um pokemon ao lado-->
         <article class="article-cabecalho-da-pagina">   <!-- envolvi estas divs com o article para fazer um posicionamento ao lado-->
             <div> <!-- caixa titulo da pagina-->
@@ -39,6 +36,8 @@
             <h4>REGRAS DO JOGO</h4>
             <p>1 - Escolha o seu pokemon para a batalha!</p>
             <p>2 - Selecione as opções mostradas na tela com fins de vencer o pokemon BOSS!</p>
+            <p>3 - Cada pokemon tem seu turno de ação, ou seja, ora você ataca, ora você é atacado!</p>
+            <p>4-  Vença o melhor! Bom jogo!</p>
         </article>
 
         <article class="article-botao-Iniciar"> <!-- caixa article para encobrir o botao funcional-->
