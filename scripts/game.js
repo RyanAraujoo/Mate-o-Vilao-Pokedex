@@ -13,7 +13,7 @@ let vidaVilao = infoPokersGame[9].vida
 let ataqueVilao = infoPokersGame[9].ataque
 let imgPokerVilao = infoPokersGame[9].src
 
-
+var statusGame = document.querySelector(".statusGame").innerHTML = "Que começem os jogos!"
 // ponto de acesso as informações dos pokemons */
 var infoGamePokemon = [
     {
@@ -30,6 +30,8 @@ var infoGamePokemon = [
     }
 ]
 
+let caixaPokemonJogador = document.getElementById("pokemon-jogador")
+let caixaPokemonVilao = document.getElementById("pokemon-vilao")
 
 //divs (caixa) dos campos que guardam as informações do pokemon jogador
 var ataquePokemonEscolhido = document.querySelector(".ataque-pokemon-jogador")
@@ -40,52 +42,32 @@ var vidaPokemonVilao = document.querySelector(".vida-pokemon-vilao")
 
 // função que dá funcionalidade ao ataque do pokemon jogador e ao pokemon vilao
 function AtacarPokemon() {
-    console.log("atacando mewtwo")
     infoGamePokemon[1].vida -= infoGamePokemon[0].ataque
-    IniciarJogo() 
-
-    if (infoGamePokemon[1].vida <= 0) {
-        // a vida não pode ser negativa 
-        infoGamePokemon[1].vida = 0
-        // quando a vida for 0, vai renderizar a pagina de captura de fim de jogo
-        renderizarLandingPageGame()
-   }
-    
+    AtualizarJogo()
+    efeitoTela(caixaPokemonVilao, "backgroundRed")
+    validarVidaPokemon()
     setTimeout(() => {
         infoGamePokemon[0].vida -= infoGamePokemon[1].ataque
-        console.log("ataque do mewtwo! ai ")
-    }, 2000)
-
-    if (infoGamePokemon[0].vida <= 0) {
-        // a vida não pode ser negativa 
-        infoGamePokemon[0].vida = 0
-         // quando a vida for 0, vai renderizar a pagina de captura de fim de jogo
-        renderizarLandingPageGame()
-    } 
-    IniciarJogo() 
+        efeitoTela(caixaPokemonJogador, "backgroundRed")
+        AtualizarJogo() 
+        validarVidaPokemon()
+    }, 1000)
 }
 // função que dá poder de cura ao pokemon jogador e ataque do pokemon vilao
 function CurarPokemon() {
-    console.log("aaaa, + 50")
     infoGamePokemon[0].vida += 50
-        IniciarJogo() 
-    
-
-    if (infoGamePokemon[0].vida >= vidaJogador) {
-        //a vida não pode ultrapassar seu nível de vida normal  
-        infoGamePokemon[0].vida = vidaJogador
-    }
-
+    AtualizarJogo()
+    validarVidaPokemon() 
+    efeitoTela(caixaPokemonJogador, "backgroundGren")
     setTimeout(() => {
-        // turno do pokemon vilao e ele te ataca 
         infoGamePokemon[0].vida -= infoGamePokemon[1].ataque
-        console.log("aiii, mewtwo")
-    }, 4000)
-    IniciarJogo()     
-    
+       efeitoTela(caixaPokemonJogador, "backgroundRed")
+        AtualizarJogo() 
+        validarVidaPokemon() 
+    },1000)
 }
 // função onload do arquivo html que renderiza os pokemons na tela 
-function IniciarJogo() {
+function AtualizarJogo() {
     
     let nomePokemonEscolhido = document.querySelector(".nome-pokemon-jogador")
     let imgPokemonEscolhido = document.querySelector(".imagem-pokemon-jogador")
@@ -105,6 +87,42 @@ function IniciarJogo() {
 
 }
     // função que renderiza a pagina de captura do fim de jogo sendo vencedor ou perdedor.
-function renderizarLandingPageGame () {
-
+    var landPage = document.querySelector(".landing-page")
+    var resulGame = document.querySelector(".resultado-game")
+    
+function VitoriaGame () {
+resulGame.innerHTML = "Voce Perdeu!!"
+resulGame.style.color = "#ff0000"
+abrirLanding()
 }
+
+function DerrotaGame () {
+resulGame.innerHTML= "Voce Ganhou!!"
+resulGame.style.color = "#228B22"
+abrirLanding()
+}
+function abrirLanding () {return landPage.style.display = 'block'}
+
+function validarVidaPokemon() {
+    if (infoGamePokemon[0].vida <= 0) {
+        // a vida não pode ser negativa 
+        infoGamePokemon[0].vida = 0
+         // quando a vida for 0, vai renderizar a pagina de captura de fim de jogo
+         VitoriaGame()
+    } 
+
+    if (infoGamePokemon[1].vida <= 0) {
+        // a vida não pode ser negativa 
+        infoGamePokemon[1].vida = 0
+        // quando a vida for 0, vai renderizar a pagina de captura de fim de jogo
+        DerrotaGame()
+   }
+}
+
+function efeitoTela (xPokemon, tomDeTela ) {
+        xPokemon.classList.add(tomDeTela)
+        setTimeout(() => {
+            xPokemon.classList.remove(tomDeTela)
+        },1000)
+} 
+
