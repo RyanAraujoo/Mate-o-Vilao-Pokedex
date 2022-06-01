@@ -68,14 +68,14 @@ function AtualizarJogo() {
     let ataquePokemonVilao = document.querySelector(".ataque-pokemon-vilao")
     let vidaPokemonVilao = document.querySelector(".vida-pokemon-vilao")
 
-    nomePokemonEscolhido.innerHTML = infoGamePokemon[0].pokeJogador
-    ataquePokemonEscolhido.innerHTML = infoGamePokemon[0].ataque
-    vidaPokemonEscolhido.innerHTML = infoGamePokemon[0].vida
+    nomePokemonEscolhido.innerHTML = `Nome: ${infoGamePokemon[0].pokeJogador}`
+    ataquePokemonEscolhido.innerHTML = `Ataque: ${infoGamePokemon[0].ataque}`
+    vidaPokemonEscolhido.innerHTML = `Vida: ${infoGamePokemon[0].vida} ` 
     imgPokemonEscolhido.src = infoGamePokemon[0].src
     //   
-    nomePokemonVilao.innerHTML = infoGamePokemon[1].pokeJogador
-    ataquePokemonVilao.innerHTML = infoGamePokemon[1].ataque
-    vidaPokemonVilao.innerHTML = infoGamePokemon[1].vida
+    nomePokemonVilao.innerHTML = `Nome: ${infoGamePokemon[1].pokeJogador}`
+    ataquePokemonVilao.innerHTML = `Ataque: ${infoGamePokemon[1].ataque}` 
+    vidaPokemonVilao.innerHTML = `Vida: ${infoGamePokemon[1].vida}`
     imgPokemonVilao.src = infoGamePokemon[1].src
 
 }

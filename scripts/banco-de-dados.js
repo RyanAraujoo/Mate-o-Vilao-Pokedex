@@ -7,56 +7,56 @@ const infoPokers = [
     },
     {
         nome: "Charizard",
-        ataque: 140,   
-        vida: 210,
+        ataque: 100,   
+        vida: 250,
         src: "../assets/pokers/charizard-pokemon-charizard.gif"    
     },
     {
         nome: "Gengar",
-        ataque: 75,   
-        vida: 180,
+        ataque: 85,   
+        vida: 235,
         src: "../assets/pokers/pokemon-gengar.gif"
     },
     {
         nome: "Bulbasaur",
-        ataque: 100,   
+        ataque: 90,   
         vida:  200,
         src: "../assets/pokers/bulbasaur.gif"       
     },
     {
         nome:  "Umbreon",
-        ataque: 90,   
-        vida: 150,
+        ataque: 82,   
+        vida: 205,
         src: "../assets/pokers/umbreon-pokemon.gif"       
     },
     {
         nome: "Lucario",
-        ataque: 120,   
-        vida: 170,      
+        ataque: 95,   
+        vida: 195,      
         src: "../assets/pokers/lucario-pokemon.gif"
     },
     {
         nome: "Gardevoir",
-        ataque: 80,   
-        vida: 190,
+        ataque: 95,   
+        vida: 240,
         src: "../assets/pokers/gardevoir-pokemon.gif" 
     },
     {
         nome: "Eevee",
-        ataque: 50,   
-        vida: 150,
+        ataque: 80,   
+        vida: 200,
         src: "../assets/pokers/eevee-pokemon.gif"
     },
     {
         nome: "Pikachu",
         ataque: 100,   
-        vida: 200,
+        vida: 280,
         src: "../assets/pokers/pokemon-pikachu.gif"          
     },
     {
         nome: "Mewtwo",
         ataque: 80,
-        vida: 190,
+        vida: 300,
         src: "../assets/pokers/pokemon-vilao.gif"
     }
 ]
